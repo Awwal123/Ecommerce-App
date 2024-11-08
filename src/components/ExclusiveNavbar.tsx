@@ -37,14 +37,16 @@ export const ExclusiveNavbar: React.FC = () => {
     <>
       <div className="exclusive-nav-wrapper">
         <div className="exclusive-nav-container">
-          <img
-            onClick={toggleNavbar}
-            className="toggle-btn"
-            src="./images/hamburger.png"
-            alt="toogle-btn"
-            // style={{ display: isNavOpen ? "none" : "" }}
-          />
-          <h2 className="logo">Exclusive</h2>
+          <div className="adjustment">
+            <img
+              onClick={toggleNavbar}
+              className="exclusive-toggle-btn"
+              src="./images/hamburger.png"
+              alt="toogle-btn"
+              style={{ display: isNavOpen ? "none" : "" }}
+            />
+            <h2 className="logo">Exclusive</h2>
+          </div>
           <div className={`exclusive-nav-links  ${isNavOpen ? "open" : ""}`}>
             <p className="overlay-close-btn" onClick={closeNavBar}>
               x
@@ -109,7 +111,7 @@ export const ExclusiveNavbar: React.FC = () => {
           </div>
         </div>
       </div>
-      <hr />
+      <hr className="line" />
     </>
   );
 };

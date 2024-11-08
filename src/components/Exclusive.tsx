@@ -11,7 +11,7 @@ export function Exclusive() {
       <ExclusiveNavbar />
       <div className="margin">
       <Slider />
-        <FlashSales />
+      <FlashSales />
       </div>
     </>
   );

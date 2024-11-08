@@ -1,6 +1,7 @@
 import React from "react";
 import Timer from "./Timer";
 import "./styles.css";
+import { ProductDisplay } from "./ProductDisplay";
 
 export function FlashSales() {
   return (
@@ -30,7 +31,9 @@ export function FlashSales() {
             </div>
           </div>
         </div>
+        <ProductDisplay />
       </div>
+      
     </div>
   );
 }
