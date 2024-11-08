@@ -789,7 +789,6 @@ body {
   gap: 80px;
 }
 .product-items-container {
-  
   width: 1170px;
   height: 436px;
   display: flex;
@@ -1222,8 +1221,8 @@ body {
   }
   .mobile-slide-img {
     max-width: 45vw;
-    max-height: 100vh;
-    height: 100%;
+    max-height: 45vh;
+    height: auto;
   }
   .timer-container {
     max-width: 30vw;

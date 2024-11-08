@@ -42,7 +42,7 @@ export const ExclusiveNavbar: React.FC = () => {
             className="toggle-btn"
             src="./images/hamburger.png"
             alt="toogle-btn"
-            style={{ display: isNavOpen ? "none" : "" }}
+            // style={{ display: isNavOpen ? "none" : "" }}
           />
           <h2 className="logo">Exclusive</h2>
           <div className={`exclusive-nav-links  ${isNavOpen ? "open" : ""}`}>

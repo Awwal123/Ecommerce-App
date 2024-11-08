@@ -15,7 +15,7 @@ export function FlashSales() {
             <p className="flash-text">Flash Sales</p>
             <Timer duration={3 * 24 * 60 * 60 * 1000} />
             <div className="arrow-right-left">
-              <div className="arrows">
+              {/* <div className="arrows">
                 <img
                   className="arrow-img"
                   src="./images/Left-Arrow.png"
@@ -26,7 +26,7 @@ export function FlashSales() {
                   src="./images/Right-Arrow.png"
                   alt=""
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
