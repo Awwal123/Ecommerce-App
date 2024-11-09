@@ -90,13 +90,13 @@ export function Slider() {
               {" "}
               <img
                 className="mobile-slide-img"
-                src="./images/Sample3.jpg"
+                src="./images/Iphone14Pro.png"
                 alt=""
               />
             </Link>
          <Link to={"/mobile-advert2"}>  <img
               className="mobile-slide-img"
-              src="./images/Sample4.jpg"
+              src="./images/Samsung.png"
               alt=""
             />
             </Link> 

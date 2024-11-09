@@ -4,8 +4,10 @@ import "./styles.css";
 import { ProductDisplay } from "./ProductDisplay";
 import { products } from "./ProductData";
 
+
 export function FlashSales() {
   return (
+    <>
     <div className="exclusive-wrapper">
       <div className="sales-container">
         <div className="flash-sales-container">
@@ -20,9 +22,9 @@ export function FlashSales() {
           </div>
         </div>
         <ProductDisplay products={products} />
-
-        <h1>Ameer</h1>
       </div>
+      
     </div>
+    </>
   );
 }
