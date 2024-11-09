@@ -2,6 +2,7 @@ import React from "react";
 import Timer from "./Timer";
 import "./styles.css";
 import { ProductDisplay } from "./ProductDisplay";
+import { products } from "./ProductData";
 
 export function FlashSales() {
   return (
@@ -15,25 +16,13 @@ export function FlashSales() {
           <div className="flash-sales-text">
             <p className="flash-text">Flash Sales</p>
             <Timer duration={3 * 24 * 60 * 60 * 1000} />
-            <div className="arrow-right-left">
-              {/* <div className="arrows">
-                <img
-                  className="arrow-img"
-                  src="./images/Left-Arrow.png"
-                  alt=""
-                />
-                <img
-                  className="arrow-img"
-                  src="./images/Right-Arrow.png"
-                  alt=""
-                />
-              </div> */}
-            </div>
+            <div className="arrow-right-left"></div>
           </div>
         </div>
-        <ProductDisplay />
+        <ProductDisplay products={products} />
+
+        <h1>Ameer</h1>
       </div>
-      
     </div>
   );
 }
