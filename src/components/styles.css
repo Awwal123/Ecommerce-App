@@ -1186,7 +1186,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #db4444;
+    /* background-color: #db4444; */
     gap: 20px;
   }
   .nav-alignment {

@@ -4,6 +4,7 @@ import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import { Slider } from "./Slider";
 import { FlashSales } from "./FlashSales";
 import { ProductDisplay2 } from "./ProductDisplay2";
+import { products2 } from "./ProductData2";
 import "./styles.css";
 export function Exclusive() {
   return (
@@ -13,7 +14,7 @@ export function Exclusive() {
       <div className="margin">
         <Slider />
         <FlashSales />
-        <ProductDisplay2 />
+        <ProductDisplay2  products2={products2} />
       </div>
     </>
   );
