@@ -14,6 +14,7 @@
     "@types/node": "^22.8.7",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "axios": "^1.7.7",
     "cra-template-typescript": "1.2.0",
     "firebase": "^11.0.1",
     "react": "^18.3.1",
