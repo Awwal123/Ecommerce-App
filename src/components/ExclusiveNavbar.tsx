@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Cart } from "./Cart";
+import { useCart } from "./CartContext"; 
 import "./styles.css";
 
 export const ExclusiveNavbar: React.FC = () => {
@@ -8,6 +8,11 @@ export const ExclusiveNavbar: React.FC = () => {
   //state to track whether the nav-magnify or input box should be displayed
   const [isEditing, setIsEditing] = useState(false);
   const [inputValue, setInputValue] = useState("");
+
+  // Access cart context
+  const { cartItems } = useCart();
+    // Calculate the total number of items in the cart
+  const totalCartItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   // function to  toggle d Navbar
   const toggleNavbar = () => setIsNavOpen(!isNavOpen);
@@ -101,7 +106,7 @@ export const ExclusiveNavbar: React.FC = () => {
                 {" "}
                 <img className="action-img" src="./images/Cart.png" alt="w" />
               </Link>
-              <span className="action-count">4</span>
+              <span className="action-count">{totalCartItems}</span>
             </div>
 
             <div className="action-wrapper">

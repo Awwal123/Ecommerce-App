@@ -3,9 +3,12 @@ import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { Footer } from "./Footer";
-import "./styles.css"
+import { useCart } from "./CartContext"; // Import the Cart context
+import "./styles.css";
 
 export function Cart() {
+  const { cartItems, removeFromCart, updateQuantity, total } = useCart(); // Access context data and actions
+
   return (
     <>
       <Header />
@@ -27,83 +30,67 @@ export function Cart() {
               </div>
             </div>
 
-            <div className="products-item">
-              <div className="product-item-headings">
-                <div className="added-item-container">
-                  <img
-                    className="cancel-btn"
-                    src="./images/CancelBtn.png"
-                    alt="delete"
-                  />
-                  <img
-                    className="added-img"
-                    src="./images/AddedImg1.png"
-                    alt=""
-                  />
-                  <div className="product-name-container">
-                    <p className="product-name">LCD Monitor</p>
-                  </div>
-                </div>
-
-                <p className="price">$950</p>
-                <div className="quantity-container">
-                  <div quantity-wrapper>
-                    <div className="quantity-alignment">
-                      <p>01</p>
-                      <div className="add-sub-container">
-                        <img src="./images/DropUp.png" alt="" />
-                        <img src="./images/DropDown.png" alt="" />
+            {cartItems.length > 0 ? (
+              cartItems.map((item) => (
+                <div className="products-item" key={item.id}>
+                  <div className="product-item-headings">
+                    <div className="added-item-container">
+                      <img
+                        className="cancel-btn"
+                        src="./images/CancelBtn.png"
+                        alt="delete"
+                        onClick={() => removeFromCart(item.id)}
+                      />
+                      <img
+                        className="added-img"
+                        src={item.imgUrl}
+                        alt={item.name}
+                      />
+                      <div className="product-name-container">
+                        <p className="product-name">{item.name}</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <p className="sub-total">$950</p>
-              </div>
-            </div>
 
-            {/* second */}
-            <div className="products-item">
-              <div className="product-item-headings">
-                <div className="added-item-container">
-                  <img
-                    className="cancel-btn"
-                    src="./images/CancelBtn.png"
-                    alt="delete"
-                  />
-                  <img
-                    className="added-img"
-                    src="./images/USBGamePad.png"
-                    alt=""
-                  />
-                  <div className="product-name-container">
-                    <p className="product-name">GP11 USB Gamepad</p>
-                  </div>
-                </div>
-
-                <p className="price">$550</p>
-                <div className="quantity-container">
-                  <div quantity-wrapper>
-                    <div className="quantity-alignment">
-                      <p>01</p>
-                      <div className="add-sub-container">
-                        <img className="increase-item-quantity" src="./images/DropUp.png" alt="" />
-                        <img className="decrease-item-quantity" src="./images/DropDown.png" alt="" />
+                    <p className="price">${item.price.toFixed(2)}</p>
+                    <div className="quantity-container">
+                      <div className="quantity-wrapper">
+                        <div className="quantity-alignment">
+                          <p>{item.quantity}</p>
+                          <div className="add-sub-container">
+                            <img
+                              src="./images/DropUp.png"
+                              alt="Increase"
+                              onClick={() =>
+                                updateQuantity(item.id, item.quantity + 1)
+                              }
+                            />
+                            <img
+                              src="./images/DropDown.png"
+                              alt="Decrease"
+                              onClick={() =>
+                                item.quantity > 1 &&
+                                updateQuantity(item.id, item.quantity - 1)
+                              }
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
+                    <p className="sub-total">
+                      ${(item.price * item.quantity).toFixed(2)}
+                    </p>
                   </div>
                 </div>
-                <p className="sub-total">$550</p>
-              </div>
-            </div>
+              ))
+            ) : (
+              <p className="empty-cart-message">Your cart is empty!</p>
+            )}
           </div>
           <div className="products-btn">
             <Link to={"/exclusive"}>
-              {" "}
-              <button className="return-to-shop-btn">Return To Shop </button>
+              <button className="return-to-shop-btn">Return To Shop</button>
             </Link>
-            <Link to={"/product-display"}>
-              <button className="update-cart">Update Cart</button>
-            </Link>
+            <button className="update-cart">Update Cart</button>
           </div>
 
           <div className="cart-checkout">
@@ -121,7 +108,7 @@ export function Cart() {
               {/* Subtotal */}
               <div className="sub-total-container">
                 <p>Subtotal:</p>
-                <p>$1750</p>
+                <p>${total.toFixed(2)}</p>
               </div>
               <hr />
               {/* Shipping */}
@@ -133,7 +120,7 @@ export function Cart() {
               {/* Total */}
               <div className="sub-total-container">
                 <p>Total:</p>
-                <p>$1750</p>
+                <p>${total.toFixed(2)}</p>
               </div>
 
               <button className="process-to-checkout">
@@ -146,5 +133,4 @@ export function Cart() {
       <Footer />
     </>
   );
-} 
-
+}
