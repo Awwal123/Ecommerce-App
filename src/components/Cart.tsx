@@ -22,11 +22,19 @@ export function Cart() {
         <div className="products-container">
           <div className="product-items-container">
             <div className="products-item">
+              <div>
+                {/* here */}
+                {/* mobile */}
+              <h2 className="sub-mobile">Subtotal</h2>
+              <p className="sub-total">
+                      {/* ${(item.price * item.quantity).toFixed(2)} */}
+                    </p>
+                  </div>
               <div className="product-item-headings">
-                <p>Product</p>
-                <p>Price</p>
-                <p>Quantity</p>
-                <p>Subtotal</p>
+                <p className="products-heads">Product</p>
+                <p className="products-heads">Price</p>
+                <p className="products-heads">Quantity</p>
+                <p className="products-heads">Subtotal</p>
               </div>
             </div>
 
@@ -46,12 +54,36 @@ export function Cart() {
                         src={item.imgUrl}
                         alt={item.name}
                       />
+
                       <div className="product-name-container">
                         <p className="product-name">{item.name}</p>
+                        <p className="price-mobile">${item.price.toFixed(2)}</p>
                       </div>
                     </div>
 
                     <p className="price">${item.price.toFixed(2)}</p>
+
+                    {/* mobile */}
+                    <div className="mobile-quantity">
+                      <div
+                        className="add-item"
+                        onClick={() =>
+                          updateQuantity(item.id, item.quantity + 1)
+                        }
+                      >
+                        +
+                      </div>
+                      <p className="quanti">{item.quantity}</p>
+                      <div
+                        className="reduce-item"
+                        onClick={() =>
+                          item.quantity > 1 &&
+                          updateQuantity(item.id, item.quantity - 1)
+                        }
+                      >
+                        -
+                      </div>
+                    </div>
                     <div className="quantity-container">
                       <div className="quantity-wrapper">
                         <div className="quantity-alignment">
@@ -83,7 +115,7 @@ export function Cart() {
                 </div>
               ))
             ) : (
-              <p className="empty-cart-message">Your cart is empty!</p>
+              <h1 className="empty-cart-message">Your cart is empty!</h1>
             )}
           </div>
           <div className="products-btn">

@@ -1,7 +1,8 @@
-// CartContext.tsx
 import React, { createContext, useState, ReactNode, useContext, useEffect } from "react";
 import {toast} from "react-toastify";
 
+
+//Defines d structure of cart item 
 interface CartItem {
   id: number;
   name: string;
@@ -10,6 +11,7 @@ interface CartItem {
   imgUrl: string;
 }
 
+//Defines d data and function d CartContext will provide
 interface CartContextProps {
   cartItems: CartItem[];
   addToCart: (product: CartItem) => void;

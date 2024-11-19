@@ -12,6 +12,7 @@ export interface Product {
 }
 
 export const products: Product[] = [
+ 
   {
     id: 1,
     name: "HAVIT HV-G92 Gamepad",
@@ -103,3 +104,4 @@ export const products: Product[] = [
     ratingCount: 65,
   },
 ];
+// console.log(products)

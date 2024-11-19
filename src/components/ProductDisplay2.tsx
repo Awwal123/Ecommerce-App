@@ -4,6 +4,7 @@ import { useCart } from "./CartContext"; // 1
 import "./styles.css";
 import { products } from "./ProductData";
 
+
 interface ProductDisplayProps2 {
   products2: Product[];
 }
@@ -12,7 +13,7 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
   products2,
 }) => {
   const [showAllProducts, setShowAllProducts] = useState(false);
-  const { addToCart } = useCart();// 2 Access addToCart function from context
+  const { addToCart } = useCart(); // 2 Access addToCart function from context
 
   const getRatingImage = (rating: number) => {
     if (rating === 5) return "./images/FiveStar.png";
@@ -26,7 +27,7 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
   };
   //3
   const handleAddToCart = (product: Product) => {
-    const cartItem  = {
+    const cartItem = {
       id: product.id,
       name: product.name,
       price: product.price,
@@ -73,7 +74,12 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
                       alt={product.name}
                     />
                   </div>
-                  <div className="add-to-cart-btn" onClick={() => handleAddToCart(product)} >Add To Cart</div>
+                  <div
+                    className="add-to-cart-btn"
+                    onClick={() => handleAddToCart(product)}
+                  >
+                    Add To Cart
+                  </div>
                 </div>
                 <div className="product-info">
                   <h4 className="product-heading">{product.name}</h4>
@@ -89,8 +95,11 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
               </div>
             ))}
           </div>
+          <hr className="exclusive-horizontal-lines" />
         </div>
       )}
+      
     </div>
+    
   );
 };
