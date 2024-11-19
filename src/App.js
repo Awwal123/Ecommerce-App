@@ -12,7 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { MobileAdver1 } from "./components/MobileAdvert1";
 import { MobileAdver2 } from "./components/MobileAdvert2";
 import { Cart } from "./components/Cart";
-import { CartProvider } from "./components/CartContext"; 
+import { CartProvider } from "./components/CartContext";
 import { NotFound } from "./components/NotFound";
 
 function App() {

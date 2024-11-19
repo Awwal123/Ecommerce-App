@@ -24,20 +24,20 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({ products }) => {
           <div className="cart-img-wrapper">
             <div className="percentage-tag">{product.discount}</div>
             <div className="cart-wish-list-container">
-              <div className="wish-list-img-wrapper">
+              {/* <div className="wish-list-img-wrapper">
                 <img
                   className="wish-list-img"
                   src="./images/Wishlist.png"
                   alt="Wishlist"
                 />
-              </div>
-              <div className="wish-list-img-wrapper">
+              </div> */}
+              {/* <div className="wish-list-img-wrapper">
                 <img
                   className="wish-list-img"
                   src="./images/Eye.png"
                   alt="View"
                 />
-              </div>
+              </div> */}
             </div>
             <div className="cart-img-alignment">
               <img

@@ -96,10 +96,10 @@ export const ExclusiveNavbar: React.FC = () => {
           </div>
           <div className="user-actions-container">
             {/* wish-list */}
-            <div className="action-wrapper">
+            {/* <div className="action-wrapper">
               <img className="action-img" src="./images/Wishlist.png" alt="w" />
               <span className="action-count">2</span>
-            </div>
+            </div> */}
             {/* Cart */}
             <div className="action-wrapper">
               <Link to="/cart">

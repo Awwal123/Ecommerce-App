@@ -140,7 +140,7 @@ body {
   justify-content: space-between;
 }
 .hero-section-content {
-  gap: 80px;
+  gap: 90px;
   display: flex;
   justify-content: space-between;
 }
@@ -745,7 +745,7 @@ body {
 .flash-sales-text {
   display: flex;
   align-items: center;
-  gap: 10px; /* Control spacing between flash text and timer */
+  gap: 20px;
   width: 90%;
 }
 .flash-text {
@@ -837,6 +837,7 @@ body {
 .product-items-container {
   width: 1170px;
   height: 436px;
+  
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
@@ -852,7 +853,10 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
   border-radius: 4px 0px 0px 0px;
 }
-.product-item-headings {
+
+.product-item-headings,
+.product-item-heading {
+  margin-left: 10px;
   width: 1091px;
   height: 24px;
   display: flex;
@@ -861,6 +865,9 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
+}
+.product-item-heading {
+  margin-left: 34px;
 }
 .added-item-container {
   width: 64px;
@@ -1008,12 +1015,10 @@ body {
   font-weight: 500;
 }
 .cart-checkout {
-  background-color: blue;
   width: 1170px;
   height: 324px;
   margin-bottom: 80px;
   margin-top: 30px;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
 }
@@ -1049,6 +1054,9 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative; /* Enables absolute positioning of child elements */
+}
+.total {
+  display: none;
 }
 .percentage-tag {
   width: 55px;
@@ -1226,6 +1234,9 @@ body {
   background-color: #db4444;
 }
 @media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
   .header {
     display: none;
   }
@@ -1313,6 +1324,7 @@ body {
   /* hero-section start */
 
   .hero-section-content {
+    max-width: 100vw;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1406,7 +1418,9 @@ body {
   .exclusive-nav-links.open {
     transform: translateX(0);
   }
-
+  .four-error-container {
+    margin-left: 20px;
+  }
   /* Individual link styling */
   .exclusive-nav-link {
     line-height: 10px;
@@ -1505,8 +1519,8 @@ body {
     font-weight: bold;
   }
   .flash-text {
-    font-size: 19px;
-    max-width: 30vw;
+    font-size: 18px;
+    /* max-width: 30vw; */
     width: 100%;
     margin-top: 10px;
     letter-spacing: 0.01em;
@@ -1569,36 +1583,68 @@ body {
   }
 
   /* Added to cart */
-  /* .products-container {
-    width: 100vw;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  } */
   .product-items-container {
+    height: 400px;
     max-width: 100vw;
     width: 100%;
   }
   .not-found-wrapper {
     margin: 20px 0px;
   }
-  .products-btn,
-  .cart-checkout {
-    display: none;
-  }
 
+  .cart-checkout {
+    width: 98vw;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .process-to-checkout {
+    max-width: 70vw;
+    margin-top: 2px;
+  }
+  .coupon-container {
+    margin-top: 20px;
+    margin-left: 25px;
+    display: none;
+    width: 100vw;
+    height: 56px;
+  }
+  .cart-total-container {
+    width: 90vw;
+  }
+  .products-btn {
+    width: 90vw;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .return-to-shop-btn,
+  .update-cart {
+    width: 40vw;
+    padding: 16px;
+  }
+  .cart-links {
+    width: 80vw;
+  }
   .sub-total {
     display: none;
   }
   .product-item-headings {
-    /* display: none; */
+    display: none;
     max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
     width: 100%;
+  }
+  .product-item-heading {
+    display: none;
+  }
+  .product-item {
+    display: none;
   }
   .products-heads {
     display: none;
@@ -1607,13 +1653,14 @@ body {
     display: none;
   }
   .product-name {
-    font-size: 14px;
+    font-size: 12px;
   }
   .products-container {
     max-width: 100vw;
     width: 100%;
   }
-  .products-item {
+  .products-item,
+  .product-item {
     max-width: 100vw;
     width: 100%;
     padding: 24px;
@@ -1653,6 +1700,15 @@ body {
     position: relative;
     gap: 15px;
   }
+  .total {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .total-amount {
+    font-size: 19px;
+  }
   .quanti {
     font-size: 16px;
     padding-top: 10px;
@@ -1660,7 +1716,6 @@ body {
   /* Category start */
   .category-container {
     width: 90vw;
-    /* height: 145px; */
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     overflow-x: auto;

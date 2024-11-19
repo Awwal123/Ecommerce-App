@@ -52,7 +52,7 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
                 <div className="cart-img-wrapper">
                   <div className="percentage-tag">{product.discount}</div>
                   <div className="cart-wish-list-container">
-                    <div className="wish-list-img-wrapper">
+                    {/* <div className="wish-list-img-wrapper">
                       <img
                         className="wish-list-img"
                         src="./images/Wishlist.png"
@@ -65,7 +65,7 @@ export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
                         src="./images/Eye.png"
                         alt="View"
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <div className="cart-img-alignment">
                     <img

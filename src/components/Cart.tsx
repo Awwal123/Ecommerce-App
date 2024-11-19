@@ -3,7 +3,7 @@ import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { Footer } from "./Footer";
-import { useCart } from "./CartContext"; // Import the Cart context
+import { useCart } from "./CartContext";
 import "./styles.css";
 
 export function Cart() {
@@ -21,26 +21,24 @@ export function Cart() {
         </div>
         <div className="products-container">
           <div className="product-items-container">
-            <div className="products-item">
-              <div>
-                {/* here */}
-                {/* mobile */}
-              <h2 className="sub-mobile">Subtotal</h2>
-              <p className="sub-total">
-                      {/* ${(item.price * item.quantity).toFixed(2)} */}
-                    </p>
-                  </div>
-              <div className="product-item-headings">
-                <p className="products-heads">Product</p>
-                <p className="products-heads">Price</p>
-                <p className="products-heads">Quantity</p>
-                <p className="products-heads">Subtotal</p>
-              </div>
+            {/* Large Screen Headings */}
+            <div className="product-item-heading">
+              <p>Product</p>
+              <p>Price</p>
+              <p>Quantity</p>
+              <p>Subtotal</p>
+            </div>
+
+            {/* Mobile Total Section */}
+            <div className="total">
+              <h2 className="total-mobile">Total:</h2>
+              <p className="total-amount">${total.toFixed(2)}</p>
             </div>
 
             {cartItems.length > 0 ? (
               cartItems.map((item) => (
                 <div className="products-item" key={item.id}>
+                  {/* Product Details */}
                   <div className="product-item-headings">
                     <div className="added-item-container">
                       <img
@@ -54,7 +52,6 @@ export function Cart() {
                         src={item.imgUrl}
                         alt={item.name}
                       />
-
                       <div className="product-name-container">
                         <p className="product-name">{item.name}</p>
                         <p className="price-mobile">${item.price.toFixed(2)}</p>
@@ -63,7 +60,7 @@ export function Cart() {
 
                     <p className="price">${item.price.toFixed(2)}</p>
 
-                    {/* mobile */}
+                    {/* Mobile Quantity Controls */}
                     <div className="mobile-quantity">
                       <div
                         className="add-item"
@@ -84,6 +81,8 @@ export function Cart() {
                         -
                       </div>
                     </div>
+
+                    {/* Desktop Quantity Controls */}
                     <div className="quantity-container">
                       <div className="quantity-wrapper">
                         <div className="quantity-alignment">
@@ -108,6 +107,7 @@ export function Cart() {
                         </div>
                       </div>
                     </div>
+
                     <p className="sub-total">
                       ${(item.price * item.quantity).toFixed(2)}
                     </p>
@@ -119,10 +119,12 @@ export function Cart() {
             )}
           </div>
           <div className="products-btn">
-            <Link to={"/exclusive"}>
+            <Link to={"/exclusive"} className="cart-links">
               <button className="return-to-shop-btn">Return To Shop</button>
             </Link>
-            <button className="update-cart">Update Cart</button>
+            <Link to={"/exclusive"} className="cart-links">
+              <button className="update-cart">Update Cart</button>
+            </Link>
           </div>
 
           <div className="cart-checkout">
@@ -156,7 +158,7 @@ export function Cart() {
               </div>
 
               <button className="process-to-checkout">
-                Process to checkOut
+                Process to Checkout
               </button>
             </div>
           </div>
