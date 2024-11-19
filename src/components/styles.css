@@ -837,7 +837,7 @@ body {
 .product-items-container {
   width: 1170px;
   height: 436px;
-  
+
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1384,6 +1384,7 @@ body {
   .logo {
     display: block;
     padding-right: 52px;
+    z-index: 20;
   }
   /* Navbar links - hidden by default for small screens */
   .exclusive-nav-links {
@@ -1400,7 +1401,7 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 50px;
-    z-index: 100;
+    z-index: 50;
     overflow: auto;
   }
 
