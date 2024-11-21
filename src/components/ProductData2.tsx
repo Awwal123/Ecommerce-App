@@ -13,7 +13,7 @@ export interface Product {
 
 export const products2: Product[] = [
   {
-    id: 1,
+    id: 10,
     name: "Men Casual Sneakers",
     price: 560,
     oldPrice: 1400,
@@ -23,7 +23,7 @@ export const products2: Product[] = [
     ratingCount: 60,
   },
   {
-    id: 2,
+    id: 11,
     name: "Itel 20000mh Power Bank",
     price: 150,
     oldPrice: 500,
@@ -33,7 +33,7 @@ export const products2: Product[] = [
     ratingCount: 215,
   },
   {
-    id: 3,
+    id: 12,
     name: "Sony PS4 Console",
     price: 1200,
     oldPrice: 2000,
@@ -43,7 +43,7 @@ export const products2: Product[] = [
     ratingCount: 96,
   },
   {
-    id: 4,
+    id: 13,
     name: "P47 Wireless Headphone",
     price: 116,
     oldPrice: 560,
@@ -53,7 +53,7 @@ export const products2: Product[] = [
     ratingCount: 78,
   },
   {
-    id: 5,
+    id: 14,
     name: "Casual High-Top Shoes",
     price: 420,
     oldPrice: 1200,
@@ -63,7 +63,7 @@ export const products2: Product[] = [
     ratingCount: 78,
   },
   {
-    id: 6,
+    id: 15,
     name: "XIAOMI Redmi 13 6.79",
     price: 700,
     oldPrice: 900,
@@ -73,7 +73,7 @@ export const products2: Product[] = [
     ratingCount: 300,
   },
   {
-    id: 7,
+    id: 16,
     name: "2 In 1 Men's Short Sleeve",
     price: 20,
     oldPrice: 200,
@@ -83,7 +83,7 @@ export const products2: Product[] = [
     ratingCount: 96,
   },
   {
-    id: 8,
+    id: 17,
     name: "Rubick Cube",
     price: 7,
     oldPrice: 18,

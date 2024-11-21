@@ -52,7 +52,7 @@ export const Categories = () => {
           <img
             className="categoties-img"
             src="./images/Category-HeadPhone.png"
-            alt="cellPhone"
+            alt="headphone"
           />
           <p>HeadPhone</p>
         </div>
@@ -61,7 +61,7 @@ export const Categories = () => {
           <img
             className="categoties-img"
             src="./images/Category-GamePad.png"
-            alt="cellPhone"
+            alt="game-pad"
           />
           <p>Gaming</p>
         </div>

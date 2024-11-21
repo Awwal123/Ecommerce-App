@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Product } from "./ProductData2";
 import { useCart } from "./CartContext"; // 1
 import "./styles.css";
@@ -12,7 +12,15 @@ interface ProductDisplayProps2 {
 export const ProductDisplay2: React.FC<ProductDisplayProps2> = ({
   products2,
 }) => {
-  const [showAllProducts, setShowAllProducts] = useState(false);
+  const [showAllProducts, setShowAllProducts] = useState<boolean>(() => {
+    const storedValue = localStorage.getItem("showAllProducts");
+    return storedValue ? JSON.parse(storedValue) : false;
+  });
+
+  // Update localStorage whenever the state changes
+  useEffect(() => {
+    localStorage.setItem("showAllProducts", JSON.stringify(showAllProducts));
+  }, [showAllProducts])
   const { addToCart } = useCart(); // 2 Access addToCart function from context
 
   const getRatingImage = (rating: number) => {
