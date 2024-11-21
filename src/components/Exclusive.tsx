@@ -13,6 +13,7 @@ import { Categories } from "./Categories";
 export function Exclusive() {
   return (
     <>
+    
       <Header />
       <ExclusiveNavbar />
       <div className="margin">

@@ -39,7 +39,7 @@ export interface Product {
       name: "Infinix Smart 8",
       price: 500,
       oldPrice: 1160,
-      imgUrl: "./images/infinix.png",
+      imgUrl: "./images/Infinix.png",
       rating: 4,
       ratingCount: 32,
     },

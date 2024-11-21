@@ -14,13 +14,16 @@ import { MobileAdver2 } from "./components/MobileAdvert2";
 import { Cart } from "./components/Cart";
 import { CartProvider } from "./components/CartContext";
 import { NotFound } from "./components/NotFound";
+import { Fade } from "react-awesome-reveal";
 
 function App() {
   return (
     <Router>
       <CartProvider>
         <ToastContainer position="bottom-left" />
+        <Fade direction="up" duration={2000} triggerOnce>
         <Routes>
+        
           <Route path="/" element={<SignUp />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
@@ -30,7 +33,9 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/not-found" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/not-found" />} />
+        
         </Routes>
+        </Fade>
       </CartProvider>
     </Router>
   );

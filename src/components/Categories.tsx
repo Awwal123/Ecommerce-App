@@ -51,7 +51,7 @@ export const Categories = () => {
         <div className="category-item">
           <img
             className="categoties-img"
-            src="./images/Category-HeadPhone.png"
+            src="./images/Category-Headphone.png"
             alt="headphone"
           />
           <p>HeadPhone</p>
@@ -60,7 +60,7 @@ export const Categories = () => {
         <div className="category-item">
           <img
             className="categoties-img"
-            src="./images/Category-GamePad.png"
+            src="./images/Category-Gamepad.png"
             alt="game-pad"
           />
           <p>Gaming</p>

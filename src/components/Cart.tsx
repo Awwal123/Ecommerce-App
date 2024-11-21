@@ -3,6 +3,7 @@ import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import { Header } from "./Header";
 import { Link } from "react-router-dom";
 import { Footer } from "./Footer";
+import { Fade } from "react-awesome-reveal";
 import { useCart } from "./CartContext";
 import "./styles.css";
 
@@ -11,6 +12,7 @@ export function Cart() {
 
   return (
     <>
+    <Fade direction="up" duration={2000} triggerOnce>
       <Header />
       <ExclusiveNavbar />
       <div className="not-found-wrapper">
@@ -165,6 +167,7 @@ export function Cart() {
         </div>
       </div>
       <Footer />
+      </Fade>
     </>
   );
 }

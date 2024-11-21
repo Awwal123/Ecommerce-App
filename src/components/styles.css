@@ -1266,6 +1266,55 @@ body {
   margin-bottom: 30px;
   margin-top: 15px;
 }
+/* end */
+
+.jambox-advert-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+.jambox-advert-wrapper {
+  width: 892px;
+  height: 344px;
+  color: #f5f5f5;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+}
+.jambox-img {
+  width: 500px;
+  height: 300px;
+}
+.jambox-category {
+  color: #1ad960;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.jambox-heading {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 2px;
+}
+.jambox-btn {
+  width: Hug (171px) px;
+  height: Hug (56px) px;
+  padding: 16px 48px;
+  /* gap: 10px; */
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #f5f5f5;
+  background-color: #00ff66;
+}
+.jambox-time {
+  margin-left: -32px;
+  margin-bottom: 20px;
+}
 @media (max-width: 768px) {
   body {
     font-size: 12px;
@@ -1760,5 +1809,8 @@ body {
     width: 100px;
     height: 50px;
     padding: 15px 17px;
+  }
+  .jambox-advert-container {
+    display: none;
   }
 }

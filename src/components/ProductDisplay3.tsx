@@ -3,7 +3,8 @@ import "./styles.css";
 import { ProductDisplay4 } from "./ProductDisplay4";
 import { Product } from "./ProductData3";
 import { useCart } from "./CartContext";
-import {product4} from "./ProductData4"
+import { product4 } from "./ProductData4";
+import { JamboxAvert } from "./JamboxAdvert";
 // import { products } from "./ProductData";
 
 interface ProductDisplayProps3 {
@@ -35,8 +36,7 @@ export const ProductDisplay3: React.FC<ProductDisplayProps3> = ({
   // Update localStorage whenever the state changes
   useEffect(() => {
     localStorage.setItem("showAllProducts", JSON.stringify(showAllProducts));
-  }, [showAllProducts])
-  
+  }, [showAllProducts]);
 
   const handleViewAllClick = () => {
     setShowAllProducts(true);
@@ -62,7 +62,6 @@ export const ProductDisplay3: React.FC<ProductDisplayProps3> = ({
                 View All
               </button>
             )}
-
           </div>
         </div>
         <div className="best-cart-container">
@@ -88,7 +87,7 @@ export const ProductDisplay3: React.FC<ProductDisplayProps3> = ({
               <div className="product-info">
                 <h4 className="product-heading">{product.name}</h4>
                 <div className="price-container">
-                  <p className="recent-price">{product.price}</p>
+                  <p className="recent-price">${product.price}</p>
                   {product.oldPrice && (
                     <p className="old-price">${product.oldPrice}</p>
                   )}
@@ -101,8 +100,10 @@ export const ProductDisplay3: React.FC<ProductDisplayProps3> = ({
             </div>
           ))}
         </div>
-        {showAllProducts && <ProductDisplay4 products4={product4}/>}
+
+        {showAllProducts && <ProductDisplay4 products4={product4} />}
         {/* <ProductDisplay4 /> */}
+        <JamboxAvert />
       </div>
     </div>
   );
