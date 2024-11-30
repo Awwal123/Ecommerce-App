@@ -21,20 +21,18 @@ function App() {
     <Router>
       <CartProvider>
         <ToastContainer position="bottom-left" />
-        <Fade direction="up" duration={2000} triggerOnce>
-        <Routes>
-        
-          <Route path="/" element={<SignUp />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/exclusive" element={<Exclusive />} />
-          <Route path="/mobile-advert1" element={<MobileAdver1 />} />
-          <Route path="/mobile-advert2" element={<MobileAdver2 />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/not-found" element={<NotFound />} />
-          <Route path="*" element={<Navigate to="/not-found" />} />
-        
-        </Routes>
+        <Fade direction="up" duration={3000} triggerOnce>
+          <Routes>
+            <Route path="/" element={<SignUp />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/exclusive" element={<Exclusive />} />
+            <Route path="/mobile-advert1" element={<MobileAdver1 />} />
+            <Route path="/mobile-advert2" element={<MobileAdver2 />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/not-found" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/not-found" />} />
+          </Routes>
         </Fade>
       </CartProvider>
     </Router>

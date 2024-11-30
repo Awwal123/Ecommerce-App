@@ -18,6 +18,7 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({ products }) => {
   };
 
   return (
+    // <div className="exclusive-wrapper">
     <div className="cart-container">
       {products.map((product) => (
         <div className="cart-img-container" key={product.id}>
@@ -75,5 +76,6 @@ export const ProductDisplay: React.FC<ProductDisplayProps> = ({ products }) => {
         </div>
       ))}
     </div>
+    // </div>
   );
 };

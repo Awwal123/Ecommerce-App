@@ -60,7 +60,7 @@ export const products2: Product[] = [
     imgUrl: "./images/TimberLand.png",
     discount: "-35%",
     rating: 4.5,
-    ratingCount: 78,
+    ratingCount: 28,
   },
   {
     id: 15,
@@ -90,6 +90,6 @@ export const products2: Product[] = [
     imgUrl: "./images/Rubic2.png",
     discount: "-37%",
     rating: 4.5,
-    ratingCount: 34,
+    ratingCount: 114,
   },
 ];

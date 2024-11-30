@@ -12,7 +12,7 @@ export function Cart() {
 
   return (
     <>
-    <Fade direction="up" duration={2000} triggerOnce>
+    <Fade direction="up" duration={3000} triggerOnce>
       <Header />
       <ExclusiveNavbar />
       <div className="not-found-wrapper">

@@ -5,7 +5,8 @@ import { Product } from "./ProductData3";
 import { useCart } from "./CartContext";
 import { product4 } from "./ProductData4";
 import { JamboxAvert } from "./JamboxAdvert";
-// import { products } from "./ProductData";
+import { ProductDisplay5 } from "./ProductDisplay5";
+import { ProductDisplay6 } from "./ProductDisplay6";
 
 interface ProductDisplayProps3 {
   products3: Product[];
@@ -101,9 +102,10 @@ export const ProductDisplay3: React.FC<ProductDisplayProps3> = ({
           ))}
         </div>
 
-        {showAllProducts && <ProductDisplay4 products4={product4} />}
-        {/* <ProductDisplay4 /> */}
-        <JamboxAvert />
+        {/* {showAllProducts && <ProductDisplay4 products4={product4} />} */}
+        
+      
+        
       </div>
     </div>
   );
