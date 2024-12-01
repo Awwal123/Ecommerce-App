@@ -15,27 +15,16 @@ import { JamboxAvert } from "./JamboxAdvert";
 import { ProductDisplay5 } from "./ProductDisplay5";
 import { ProductDisplay6 } from "./ProductDisplay6";
 import { NewArrival } from "./NewArrival";
-import { WhyChooseUs } from "./WhyChooseUs";
-import { Footer } from "./Footer";
+
+import { Fade } from "react-awesome-reveal";
 
 export function Exclusive() {
-  const [showAllProducts, setShowAllProducts] = useState<boolean>(() => {
-    const storedValue = localStorage.getItem("showAllProducts");
-    return storedValue ? JSON.parse(storedValue) : false;
-  });
-
-  // Update localStorage whenever the state changes
-  useEffect(() => {
-    localStorage.setItem("showAllProducts", JSON.stringify(showAllProducts));
-  }, [showAllProducts]);
-
-  const handleViewAllClick = () => {
-    setShowAllProducts(true);
-  };
   return (
     <>
+    <Fade direction="up" duration={3000} triggerOnce>
       <Header />
       <ExclusiveNavbar />
+
       <div className="margin">
         <Slider />
         <FlashSales />
@@ -52,10 +41,9 @@ export function Exclusive() {
           <ProductDisplay5 />
           <ProductDisplay6 />
         </div>
-        <NewArrival />
-        <WhyChooseUs />
       </div>
-      {/* <Footer /> */}
+      <NewArrival />
+      </Fade>
     </>
   );
 }

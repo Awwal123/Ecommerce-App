@@ -120,6 +120,7 @@ export function Cart() {
               <h1 className="empty-cart-message">Your cart is empty!</h1>
             )}
           </div>
+          <div className="coupon-alignment">
           <div className="products-btn">
             <Link to={"/exclusive"} className="cart-links">
               <button className="return-to-shop-btn">Return To Shop</button>
@@ -163,6 +164,7 @@ export function Cart() {
                 Process to Checkout
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>

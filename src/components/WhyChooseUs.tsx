@@ -1,7 +1,8 @@
 import React from "react";
+import { Footer } from "./Footer";
 export const WhyChooseUs = () => {
   return (
-    <div className="exclusive-wrapper">
+    <>
       <div className="choose-us-container">
         <div className="dilevery">
           <div className="circle">
@@ -32,9 +33,10 @@ export const WhyChooseUs = () => {
             </div>
           </div>
           <p className="dilevery-text">MONEY BACK GUARANTEE</p>
-          <p className="dilevery-sub-text">We reurn money within 30 days</p>
+          <p className="dilevery-sub-text">We return money within 30 days</p>
         </div>
       </div>
-    </div>
+     
+    </>
   );
 };

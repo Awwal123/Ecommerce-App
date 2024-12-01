@@ -50,7 +50,7 @@ export const ExclusiveNavbar: React.FC = () => {
               alt="toogle-btn"
               // style={{ display: isNavOpen ? "none" : "" }}
             />
-            <h2 className="logo">Exclusive</h2>
+           <h2 className="logo"><Link className="link" to={"/exclusive"}> Exclusive</Link></h2>
           </div>
           <div className={`exclusive-nav-links  ${isNavOpen ? "open" : ""}`}>
             <p className="overlay-close-btn" onClick={closeNavBar}>
@@ -59,7 +59,7 @@ export const ExclusiveNavbar: React.FC = () => {
             <h2 className="logo2">Exclusive</h2>
             <p className="exclusive-nav-link">Home</p>
             <p className="exclusive-nav-link">Contact</p>
-            <p className="exclusive-nav-link">About</p>
+            <p className="exclusive-nav-link"><Link className="link" to={"/about"}>About</Link> </p>
             <p className="exclusive-nav-link">Sign Up</p>
             <hr className="horizontal-rule" />
 

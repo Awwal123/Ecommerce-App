@@ -15,6 +15,7 @@ import { Cart } from "./components/Cart";
 import { CartProvider } from "./components/CartContext";
 import { NotFound } from "./components/NotFound";
 import { Fade } from "react-awesome-reveal";
+import { AboutUs } from "./components/AboutUs";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/not-found" element={<NotFound />} />
             <Route path="*" element={<Navigate to="/not-found" />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </Fade>
       </CartProvider>
