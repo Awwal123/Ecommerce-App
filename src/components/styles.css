@@ -39,12 +39,7 @@ body {
   display: none;
   cursor: pointer;
 }
-.exclusive-toggle-btn {
-  width: 47px;
-  height: 47px;
-  display: none;
-  cursor: pointer;
-}
+
 .navbar-container {
   width: 100%;
   display: flex;
@@ -121,6 +116,12 @@ body {
 }
 .logo2 {
   display: none;
+}
+.exclusive-toggle-btn {
+  width: 47px;
+  height: 47px;
+  display: none;
+  cursor: pointer;
 }
 /* end */
 
@@ -1562,11 +1563,7 @@ body {
     z-index: 20;
     cursor: pointer;
   }
-  .exclusive-toggle-btn {
-    display: block;
-    z-index: 20;
-    cursor: pointer;
-  }
+
   .nav-links-container {
     position: fixed;
     display: flex;
@@ -1574,13 +1571,13 @@ body {
     gap: 8px;
     padding-top: 20px;
     top: 0;
-    left: -100%; /*Hidden by default */
+    left: -100%;
     height: 100%;
-    width: 80%; /* Takes 80% of the screen */
+    width: 80%;
     background-color: #333;
     color: white;
-    transition: left 0.3s ease; /* Smooth transition */
-    z-index: 15;
+    transition: left 0.3s ease;
+    z-index: 100;
     padding: 1rem;
   }
 
@@ -1600,14 +1597,13 @@ body {
   .overlay {
     position: fixed;
     top: 0;
-    left: 80%; /* Covers remaining 10% */
+    left: 80%;
     width: 20%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent */
-    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
   }
-  .logo,
-  .excluive-logo {
+  .logo {
     display: none;
   }
   .logo2 {
@@ -1617,7 +1613,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: #db4444; */
     gap: 20px;
   }
   .nav-alignment {
@@ -1687,6 +1682,14 @@ body {
     align-items: center;
     height: 38px;
     gap: 0px;
+  }
+  .excluive-logo {
+    display: none;
+  }
+  .exclusive-toggle-btn {
+    display: block;
+    z-index: 20;
+    cursor: pointer;
   }
 
   /* Logo and toggle button */
@@ -2086,7 +2089,6 @@ body {
     width: 100%;
     height: auto;
     margin-top: 20px;
-    
   }
   .about-heading {
     font-size: 32px;
@@ -2115,7 +2117,6 @@ body {
     max-width: 100vw;
     justify-content: center;
     align-items: center;
-    
   }
   .about-section-three {
     margin-top: 200px;
