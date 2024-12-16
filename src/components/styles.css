@@ -410,6 +410,10 @@ body {
   color: #db4444;
   font-weight: 400;
   margin-top: 10px;
+  cursor: pointer;
+}
+.forget-pass:hover {
+  color: #fb5e5e;
 }
 /* end */
 
