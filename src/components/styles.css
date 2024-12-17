@@ -1260,6 +1260,14 @@ body {
 }
 .category-item:hover {
   background-color: #db4444;
+  color: #f5f5f5;
+  border: none;
+}
+.category-img {
+  transition: filter 0.3s ease;
+}
+.category-item:hover .categoties-img {
+  filter: invert(100%) brightness(200%); /* Invert colors and brighten */
 }
 
 /* end */
@@ -2130,7 +2138,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* display: none; */
   }
   .section-two-wrapper {
     display: flex;
