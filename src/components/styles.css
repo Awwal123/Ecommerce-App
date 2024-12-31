@@ -6,7 +6,7 @@
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 .header {
   width: 100%;
@@ -53,6 +53,7 @@ body {
   gap: 48px;
 }
 .nav-alignment {
+  background-color: greenyellow;
   display: flex;
   width: Hug (717px) px;
   height: Hug (24px) px;
@@ -1659,6 +1660,7 @@ body {
   .sign-up-form-container {
     display: flex;
     padding-top: 30px;
+    background-color: red;
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -9,8 +9,8 @@ export const SignUp: React.FC = () => {
   return (
     <div className="wrapper">
       <Header />
-      <HeroSection />
       <Navbar />
+      <HeroSection />
       <Footer />
     </div>
   );
