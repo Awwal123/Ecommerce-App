@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header } from "./Header";
+// import { Header } from "./Header";
 import { ExclusiveNavbar } from "./ExclusiveNavbar";
 import { Slider } from "./Slider";
 import { FlashSales } from "./FlashSales";
@@ -22,8 +22,9 @@ export function Exclusive() {
   return (
     <>
     <Fade direction="up" duration={3000} triggerOnce>
-      <Header />
+      
       <ExclusiveNavbar />
+      {/* <Header /> */}
 
       <div className="margin">
         <Slider />
