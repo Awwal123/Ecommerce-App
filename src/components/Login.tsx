@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Header } from "./Header";
-import Navbar from "./Navbar";
+import { Navbar} from "./Navbar";
 import { Footer } from "./Footer";
 import { auth, googleProvider } from "./config/firebase";
 import { db } from "./config/firebase"; // Firestore configuration

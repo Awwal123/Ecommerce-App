@@ -16,6 +16,7 @@ import { CartProvider } from "./components/CartContext";
 import { NotFound } from "./components/NotFound";
 import { Fade } from "react-awesome-reveal";
 import { AboutUs } from "./components/AboutUs";
+import "./components/styles.css";
 
 function App() {
   return (
